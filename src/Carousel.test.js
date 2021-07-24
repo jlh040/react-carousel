@@ -53,5 +53,11 @@ it("does not show the left arrow when on the first image", () => {
 
 it('does not show the right arrow when on the last image', () => {
   const { queryByTestId } = render(<Carousel />);
-  expect(queryByTestId('right-arrow')).not.toBeInTheDocument();
+  const rightArrow = queryByTestId('right-arrow');
+
+  // move to the last image
+  fireEvent.click(rightArrow);
+  fireEvent.click(rightArrow);
+
+  expect(rightArrow).not.toBeInTheDocument();
 })
