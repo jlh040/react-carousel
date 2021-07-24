@@ -45,3 +45,8 @@ it("works when you click on the right arrow", function() {
   expect(queryByAltText("Photo by Richard Pasquarella on Unsplash")).not.toBeInTheDocument();
   expect(queryByAltText("Photo by Pratik Patel on Unsplash")).toBeInTheDocument();
 });
+
+it("does not show the left arrow when on the first image", () => {
+  const { queryByTestId } = render(<Carousel />);
+  expect(queryByTestId('left-arrow')).not.toBeInTheDocument();
+});
