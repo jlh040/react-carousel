@@ -50,3 +50,8 @@ it("does not show the left arrow when on the first image", () => {
   const { queryByTestId } = render(<Carousel />);
   expect(queryByTestId('left-arrow')).not.toBeInTheDocument();
 });
+
+it('does not show the right arrow when on the last image', () => {
+  const { queryByTestId } = render(<Carousel />);
+  expect(queryByTestId('right-arrow')).not.toBeInTheDocument();
+})
