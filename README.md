@@ -1,8 +1,16 @@
+# Functionality
+
+This is a simple web page that allows a user to click through a slideshow of images. It was also a way for me to practice working with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/), [jest](https://jestjs.io/), and [jest-dom](https://github.com/testing-library/jest-dom#tohavetextcontent).
+
+Note that I wrote both smoke and snapshot tests for the Card and Carousel components. Then I utilized RTL and jest-dom to write tests that check the functionality that a user might come up against.
+
+Check out **src/Carousel.test.js** and **src/Card.test.js** to see the tests that I wrote.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
-In the project directory, you can run:
+(First, make sure you run `npm install` to get all of the dependencies.) In the project directory, you can run:
 
 ### `npm start`
 
