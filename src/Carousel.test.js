@@ -4,6 +4,11 @@ import Carousel from "./Carousel";
 
 it('renders without crashing', () => {
   render(<Carousel />);
+});
+
+it('matches the snapshot', () => {
+  const { asFragment } = render(<Carousel />);
+  expect(asFragment()).toMatchSnapshot();
 })
 
 it("works when you click on the right arrow", function() {
